@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dashboard.component.css">
+    <title>app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h2 class="dashboard_heading"><i class="fa fa-tachometer" style="font-size:36px"></i> Dashboard</h2>
+    <div class="cardContainer">
+        <div class="card" style="background-color:rgb(153, 29, 224);">
+            <i class="fa fa-line-chart" style="font-size:25px"></i>
+            <h3>Total Sales</h3>
+            <h1 id="total_sales">{{totalsales}}</h1>
+            <h4>increased by 60%</h4>
+        </div>
+        <div class="card" style="background-color:rgb(12, 126, 120);">
+            <i class="fa fa-database" style="font-size:25px"></i>
+            <h3>Average Sales</h3>
+            <h1 id="average_sales">{{averagesales}}</h1>
+            <h4>increased by 20%</h4>
+        </div>
+        <div class="card" style="background-color:rgb(207, 41, 91);">
+            <i class="fa fa-flag-o" style="font-size:25px"></i>
+            <h3>Total Vistors</h3>
+            <h1 id="uv">{{uniquevisitors}}</h1>
+            <h4>increased by 10%</h4>
+        </div>
+    </div>
+    <br>
+    <div class="form-wrap">
+        <table>
+            <!-- <h2 style="color:#4f4f4f">Product table </h2> -->
+            <thead>
+                <tr>
+                    <th>Product_ID</th>
+                    <th>User_ID</th>
+                    <th>Description</th>
+                    <th>Sales Amount</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let i of sold_items">
+                    <td>{{i.product_id}}</td>
+                    <td>{{i.user_id}}</td>
+                    <td>{{i.product_des}}</td>
+                    <td>{{i.sale_amount}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</body>
+
+</html>
