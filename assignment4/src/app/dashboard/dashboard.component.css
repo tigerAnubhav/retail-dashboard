@@ -1,0 +1,140 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lightgrey;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.image_class {
+  height: 40px;
+}
+
+.avatarBtn {
+  margin: 0 10px 0 0;
+  border: none;
+  background-color: #ffffff;
+  float: right;
+  cursor: pointer;
+}
+
+.dashboard_heading {
+  color: #4f4f4f;
+  margin: 35px 0 0 50px;
+}
+
+.card {
+  color: white;
+  float: left;
+  width: calc(27% - 20px);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  height: 230px;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cardContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: hidden;
+  color: #4f4f4f;
+
+}
+
+tr {
+  border-bottom: 5px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-left: hidden;
+}
+
+.form-wrap {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px 50px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .table {
+    width: 100%;
+
+  }
+
+}
+
+
+.btn {
+  border: none;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-pending {
+  background-color: rgb(153, 29, 224);
+}
+
+.btn-approved {
+  background-color: rgb(12, 126, 120);
+}
+
+.btn-reject {
+  background-color: red;
+}
