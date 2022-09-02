@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/services/auth/auth.service';
 import { TranslateService } from '@ngx-translate/core';
-
+import jwt_decode, { JwtPayload } from 'jwt-decode';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -26,7 +26,7 @@ export class SigninComponent implements OnInit {
     // Create the form
     this.signInForm = this._formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      password: ['', Validators.required],
       rememberMe: [''],
     });
   }

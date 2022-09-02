@@ -27,6 +27,7 @@ export class BoxPlotComponent implements OnInit {
   }
   private loadChart(x: any, y: any): void {
     this._chartOption = {
+
             dataset: [
         {
           // prettier-ignore
@@ -51,6 +52,7 @@ export class BoxPlotComponent implements OnInit {
           type: 'shadow'
         }
       },
+
       grid: {
         left: '10%',
         right: '10%',

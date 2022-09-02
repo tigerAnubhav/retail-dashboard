@@ -35,19 +35,11 @@ export class BarChartComponent implements OnInit {
     this._chartOption = {
 
       grid: { containLabel: true },
+
       xAxis: {
         type: 'category',
         boundaryGap: true,
-        data:[
-          "Wing G",
-          "Stretch 4",
-          "Combo G",
-          "C",
-          "PF/C",
-          "Scoring PG",
-          "Wing F",
-          "Pure PG"
-      ],
+        data:x,
         axisLabel:{
           show:true,
 
@@ -71,16 +63,7 @@ export class BarChartComponent implements OnInit {
 
       series: [
         {
-          data: [
-            175,
-            62,
-            82,
-            161,
-            92,
-            36,
-            108,
-            7
-        ],
+          data: y,
           type: 'bar',
         },
       ],

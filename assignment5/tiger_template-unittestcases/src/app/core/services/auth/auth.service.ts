@@ -13,7 +13,7 @@ import { of, EMPTY } from 'rxjs';
 })
 export class AuthenticationService {
   private _authenticated: boolean = false;
-  public text='a';
+  public text = 'a';
   constructor(
     private _httpClient: HttpClient,
     private _userService: UserService,
@@ -41,15 +41,15 @@ export class AuthenticationService {
             email: response.email,
             id: response.id,
             alias: response.email.split('@')[0],
-            expiration: addDays(Date.now(), 1), //moment().add(1, 'days').toDate(),
-            fullname:response.email.split('@')[0]
+            expiration: addDays(Date.now(), 1),
+            fullname: response.email.split('@')[0]
           })
         );
       }
     )
   }
 
-// Retrieving data:
+  // Retrieving data:
   logout(): void {
     // not being used
     // clear token remove user from local storage to log user out
